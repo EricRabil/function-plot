@@ -7,12 +7,18 @@
 //   }]
 // })
 
+const scope = {};
+math.evaluate('f(x)=x*g(x)', scope);
+math.evaluate('g(x)=x+4', scope);
+
 functionPlot({
   target: '#playground',
   // yAxis: { invert: true, },
   // xAxis: { invert: true, },
+  grid: true,
   data: [
-    { fn: '2^x', sampler: 'builtIn', graphType: 'polyline'}
+    // { fn: '2*x', sampler: 'builtIn', graphType: 'polyline'},
+    { fn: 'f', scope, sampler: 'mathjs', graphType: 'polyline'}
   ]
 })
 

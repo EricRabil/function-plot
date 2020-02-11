@@ -1,6 +1,6 @@
 {
   "name": "function-plot",
-  "version": "1.19.1",
+  "version": "1.21.4",
   "description": "A simple 2d function plotter powered by d3",
   "license": "MIT",
   "repository": {
@@ -20,7 +20,7 @@
     "fetch": "curl -o site/partials/brcdn-module.html -L https://www.brcdn.org/?module=function-plot&version=latest",
     "html": "node site.js",
     "istanbul": "istanbul cover _mocha --report lcovonly 2> /dev/null -- -R spec test/",
-    "lint": "standard",
+    "lint": "standard --fix",
     "minify": "cat dist/function-plot.js | uglifyjs -o dist/function-plot.js",
     "pre_publish": "npm run lint",
     "start": "budo index.js:site/js/function-plot.js -- --standalone functionPlot",
